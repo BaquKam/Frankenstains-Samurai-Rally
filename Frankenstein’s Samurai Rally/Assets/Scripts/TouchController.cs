@@ -16,7 +16,7 @@ public class TouchController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         if (Input.touchCount > 0)
         {
@@ -42,8 +42,8 @@ public class TouchController : MonoBehaviour
             }
 
         }
-
         transform.position = Vector3.Lerp(transform.position, velocity, speed * Time.deltaTime);
-
     }
 }
+
+//transform.position = Vector3.Lerp(transform.position, velocity, speed* Time.deltaTime);
