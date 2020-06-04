@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Background
   - Frontground
+  - ObjectDestroyer
+  - Hurdle
   layers:
   - Default
   - TransparentFX
@@ -51,4 +53,7 @@ TagManager:
     locked: 0
   - name: Frontground
     uniqueID: 3969595459
+    locked: 0
+  - name: CanvasGUI
+    uniqueID: 1261153747
     locked: 0

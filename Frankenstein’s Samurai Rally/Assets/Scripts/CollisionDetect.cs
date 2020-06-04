@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class CollisionDetect : MonoBehaviour
 {
     public GameObject gameOverPanel;
-    public Text gameScore;
-    public Text endScore;
+    //public Text gameScore;
+    //public Text endScore;
     void Start()
     {
         gameOverPanel.gameObject.SetActive(false);
@@ -17,7 +17,7 @@ public class CollisionDetect : MonoBehaviour
     {
         if (obj.gameObject.tag == "Hurdle")
         {
-            endScore.text = gameScore.text;
+            //endScore.text = gameScore.text;
             gameOverPanel.gameObject.SetActive(true);
             Destroy(gameObject);
         }else if (obj.gameObject.tag == "ObjectDestroyer")
