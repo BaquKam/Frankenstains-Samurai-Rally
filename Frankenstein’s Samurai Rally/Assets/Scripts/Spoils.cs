@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Spoils : MonoBehaviour
 {
-    public float hurdleSpeed = 5f;
-    private Vector3 hurdlePosition;
+    public float spoilSpeed = 5f;
+    private Vector3 spoilPosition;
 
     void Update()
     {
-        this.gameObject.transform.Translate(new Vector3(-1, 0, 0) * hurdleSpeed * Time.deltaTime);
+        this.gameObject.transform.Translate(new Vector3(-1, 0, 0) * spoilSpeed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -19,5 +19,4 @@ public class Enemy : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-
 }

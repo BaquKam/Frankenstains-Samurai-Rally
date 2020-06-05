@@ -1,0 +1,24 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class PointCounter : MonoBehaviour
+{
+    public Text pointText;
+    private int points = 0;
+
+    // Update is called once per frame
+    void Update()
+    {
+        pointText.text = "Spoils: " + points.ToString();
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Spoils")
+        {
+            points += 1;
+            Destroy(other.gameObject);
+        }
+    }
+}

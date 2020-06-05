@@ -8,6 +8,7 @@ TagManager:
   - Frontground
   - ObjectDestroyer
   - Hurdle
+  - Spoils
   layers:
   - Default
   - TransparentFX
@@ -50,6 +51,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 4276843887
+    locked: 0
+  - name: Spoils
+    uniqueID: 3284426281
     locked: 0
   - name: Frontground
     uniqueID: 3969595459
