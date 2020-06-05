@@ -203,8 +203,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1925519294}
-        m_MethodName: RestartGame
+      - m_Target: {fileID: 2096665367}
+        m_MethodName: RetryButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1402,7 +1402,6 @@ GameObject:
   - component: {fileID: 1925519292}
   - component: {fileID: 1925519289}
   - component: {fileID: 1925519295}
-  - component: {fileID: 1925519294}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1521,21 +1520,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.029929161, y: 0.014967442}
-  m_Size: {x: 0.69039917, y: 0.9588795}
+  m_Offset: {x: -0.029929161, y: -0.17470789}
+  m_Size: {x: 0.69039917, y: 0.69039917}
   m_Direction: 0
---- !u!114 &1925519294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1925519288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f7e33a3322e49a49b54eebde0a270a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1925519295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1652,6 +1639,7 @@ GameObject:
   - component: {fileID: 2096665364}
   - component: {fileID: 2096665366}
   - component: {fileID: 2096665365}
+  - component: {fileID: 2096665367}
   m_Layer: 5
   m_Name: GameOver
   m_TagString: Untagged
@@ -1717,3 +1705,15 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2096665363}
   m_CullTransparentMesh: 0
+--- !u!114 &2096665367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096665363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04f4e88dfd1cf39439216915a11b9eee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

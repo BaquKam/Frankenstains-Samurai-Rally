@@ -14,9 +14,9 @@ public class HurdleSpawner : MonoBehaviour
     void Start()
     {
         pathArray = new float[3];
-        pathArray[0] = -0.48f;
-        pathArray[1] = -1.46f;
-        pathArray[2] = -2.56f;
+        pathArray[0] = 0f;
+        pathArray[1] = -1f;
+        pathArray[2] = -1.97f;
         spawnDelay = hurdleSpawnDelay;
     }
 
