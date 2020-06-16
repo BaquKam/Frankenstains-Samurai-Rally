@@ -35,7 +35,7 @@ public class Bonuses : MonoBehaviour
                 enemy.gameObject.tag = "Proof";
 
                 playerPos = player.transform.position;
-                playerPos.z = -0.1f;
+                playerPos.z = 90f;
                 GameObject shieldObj = (GameObject)Instantiate(shield, playerPos, Quaternion.identity);
                 shieldObj.transform.parent = player.transform;
                 Destroy(this.gameObject);
