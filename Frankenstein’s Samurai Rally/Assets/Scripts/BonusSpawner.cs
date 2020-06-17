@@ -29,6 +29,6 @@ public class BonusSpawner : MonoBehaviour
 
     void SpawnBonus()
     {
-        Instantiate(bonuses[(int)Random.Range(0,2)], new Vector3(7.7f, Random.Range(-0.28f, -2.79f), 0), Quaternion.identity);
+        Instantiate(bonuses[(int)Random.Range(0,3)], new Vector3(7.7f, Random.Range(-0.28f, -2.50f), 0), Quaternion.identity);
     }
 }

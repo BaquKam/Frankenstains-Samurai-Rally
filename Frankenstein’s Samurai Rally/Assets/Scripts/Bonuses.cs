@@ -6,16 +6,21 @@ public class Bonuses : MonoBehaviour
 {
     [Header("Type of bonus")]
     public bool isShield;
+    public bool isAttack;
 
     [Header("Bonuses Settings")]
     public float bonusSpeed = 10f;
+    private GameObject player;
+    public GameObject enemy;
+    private GameObject[] enemytab;
 
     [Header("Shield Settings")]
     public GameObject shield;
-    public GameObject enemy;
-    private GameObject player;
     private Vector3 playerPos;
 
+    [Header("Attack Settings")]
+    public GameObject attack;
+    private Vector3 playerPosAttack;
 
     // Update is called once per frame
     void Update()
@@ -30,14 +35,37 @@ public class Bonuses : MonoBehaviour
             if(isShield == true)
             {
                 player = GameObject.FindWithTag("Player");
-                obj.gameObject.tag = "Shield";
+                //obj.gameObject.tag = "Shield";
 
+                enemytab = GameObject.FindGameObjectsWithTag("Hurdle");
+
+                for (int i = 0; i < enemytab.Length; i++)
+                {
+                    enemytab[i].gameObject.tag = "Proof";
+                }
                 enemy.gameObject.tag = "Proof";
 
                 playerPos = player.transform.position;
-                playerPos.z = 90f;
+                playerPos.z = 89f;
                 GameObject shieldObj = (GameObject)Instantiate(shield, playerPos, Quaternion.identity);
                 shieldObj.transform.parent = player.transform;
+                Destroy(this.gameObject);
+            }else if (isAttack == true)
+            {
+                player = GameObject.FindWithTag("Player");
+                obj.gameObject.tag = "Attack";
+
+                enemytab = GameObject.FindGameObjectsWithTag("Hurdle");
+
+                for (int i = 0; i < enemytab.Length; i++)
+                {
+                    enemytab[i].gameObject.tag = "Proof";
+                }
+                enemy.gameObject.tag = "Proof";
+                playerPosAttack = player.transform.position;
+                playerPos.z = 89f;
+                GameObject attackObj = (GameObject)Instantiate(attack, playerPosAttack, Quaternion.identity);
+                attackObj.transform.parent = player.transform;
                 Destroy(this.gameObject);
             }
         }

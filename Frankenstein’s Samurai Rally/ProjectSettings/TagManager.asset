@@ -11,6 +11,7 @@ TagManager:
   - Spoils
   - Shield
   - Proof
+  - Attack
   layers:
   - Default
   - TransparentFX

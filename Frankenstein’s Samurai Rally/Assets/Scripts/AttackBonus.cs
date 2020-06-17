@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shield : MonoBehaviour
+public class AttackBonus : MonoBehaviour
 {
     public float duration;
     public GameObject enemy;
@@ -11,7 +11,7 @@ public class Shield : MonoBehaviour
     void Update()
     {
         duration -= Time.deltaTime;
-        if(duration <= 0)
+        if (duration <= 0)
         {
             this.gameObject.transform.parent.tag = "Player";
 
