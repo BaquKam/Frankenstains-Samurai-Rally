@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5227129645490628019}
   - component: {fileID: -4370595316380967179}
   - component: {fileID: 5227129645490628018}
+  - component: {fileID: -5007992906636799421}
   m_Layer: 0
   m_Name: BonusAttack
   m_TagString: Untagged
@@ -134,3 +135,24 @@ MonoBehaviour:
   enemy: {fileID: 7354081756376408975, guid: ea01ebb6e7d7d7d4594cd93f94d35eea, type: 3}
   shield: {fileID: 5861743759460719450, guid: a7ccdfde778da0f4da4f60af6811128f, type: 3}
   attack: {fileID: 22945738002400103, guid: 1bed7f971fe2cb34dacbe744cc4e0ad8, type: 3}
+--- !u!50 &-5007992906636799421
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5227129645490628021}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4

@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2356018512978888332}
   - component: {fileID: 2356018512978888331}
   - component: {fileID: 2356018512978888330}
+  - component: {fileID: -7368641399275673377}
+  - component: {fileID: -5438780246293394078}
   m_Layer: 0
   m_Name: PotionShield
   m_TagString: Shield
@@ -98,8 +100,8 @@ MonoBehaviour:
   isShield: 1
   isAttack: 0
   bonusSpeed: 2.5
-  shield: {fileID: 5861743759460719450, guid: a7ccdfde778da0f4da4f60af6811128f, type: 3}
   enemy: {fileID: 7354081756376408975, guid: ea01ebb6e7d7d7d4594cd93f94d35eea, type: 3}
+  shield: {fileID: 5861743759460719450, guid: a7ccdfde778da0f4da4f60af6811128f, type: 3}
   attack: {fileID: 22945738002400103, guid: 1bed7f971fe2cb34dacbe744cc4e0ad8, type: 3}
 --- !u!58 &2356018512978888330
 CircleCollider2D:
@@ -117,3 +119,40 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.0553236}
   serializedVersion: 2
   m_Radius: 0.19306123
+--- !u!58 &-7368641399275673377
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2356018512978888329}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5249999
+--- !u!50 &-5438780246293394078
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2356018512978888329}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
