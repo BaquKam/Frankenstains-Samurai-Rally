@@ -7,6 +7,7 @@ public class PointCounter : MonoBehaviour
 {
     public Text pointText;
     private int points = 0;
+    public GameObject player;
 
     // Update is called once per frame
     void Update()
@@ -19,6 +20,9 @@ public class PointCounter : MonoBehaviour
         {
             points += 1;
             Destroy(other.gameObject);
+        }else if (other.gameObject.tag == "Proof" && player.tag == "Attack")
+        {
+            points += 1;
         }
     }
 }

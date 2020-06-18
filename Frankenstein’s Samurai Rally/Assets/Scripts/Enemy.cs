@@ -1,27 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
     public float hurdleSpeed = 5f;
     private Vector3 hurdlePosition;
 
-    //private Text pointText;
-    //private int points = 0;
-
     void Update()
     {
         this.gameObject.transform.Translate(new Vector3(-1, 0, 0) * hurdleSpeed * Time.deltaTime);
-        //pointText.text = "Spoils: " + points.ToString();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Attack")
         {
-            //points += 1;
             Destroy(gameObject);
         } else if (other.gameObject.tag == "ObjectDestroyer")
         {

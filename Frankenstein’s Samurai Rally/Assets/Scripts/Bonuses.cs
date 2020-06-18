@@ -13,14 +13,22 @@ public class Bonuses : MonoBehaviour
     private GameObject player;
     public GameObject enemy;
     private GameObject[] enemytab;
+    private AudioSource source;
 
     [Header("Shield Settings")]
     public GameObject shield;
     private Vector3 playerPos;
+    public AudioClip shieldSound;
 
     [Header("Attack Settings")]
     public GameObject attack;
     private Vector3 playerPosAttack;
+    public AudioClip attackSound;
+
+    private void Start()
+    {
+        source = GetComponent<AudioSource>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -34,6 +42,8 @@ public class Bonuses : MonoBehaviour
         {
             if(isShield == true)
             {
+                source.PlayOneShot(shieldSound, 0.77f);
+
                 player = GameObject.FindWithTag("Player");
                 //obj.gameObject.tag = "Shield";
 
@@ -52,6 +62,8 @@ public class Bonuses : MonoBehaviour
                 Destroy(this.gameObject);
             }else if (isAttack == true)
             {
+                source.PlayOneShot(attackSound, 0.77f);
+
                 player = GameObject.FindWithTag("Player");
                 obj.gameObject.tag = "Attack";
 
