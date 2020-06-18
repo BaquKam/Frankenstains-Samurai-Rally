@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1718030856411082073}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Proof
+  m_TagString: Hurdle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

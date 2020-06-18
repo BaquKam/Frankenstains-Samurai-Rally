@@ -27,7 +27,7 @@ public class Bonuses : MonoBehaviour
 
     private void Start()
     {
-        source = GetComponent<AudioSource>();
+        source = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame

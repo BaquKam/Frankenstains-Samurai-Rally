@@ -12,7 +12,6 @@ public class CollisionDetect : MonoBehaviour
     {
         gameOverPanel.gameObject.SetActive(false);
     }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Hurdle")
