@@ -1978,7 +1978,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hurdleSpawnDelay: 4
-  hurdle: {fileID: 5416914223612949194, guid: d58f93d777c977e44aeb5d8be8ee1382, type: 3}
+  hurdle0: {fileID: 959247605912172142, guid: 39db5455d0f6ac04f8b9b4dc203f1968, type: 3}
+  hurdle1: {fileID: 5416914223612949194, guid: d58f93d777c977e44aeb5d8be8ee1382, type: 3}
 --- !u!4 &1769463414
 Transform:
   m_ObjectHideFlags: 0
@@ -2440,8 +2441,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -18123409
-  m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingLayer: 3
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 6718a819c2a92c24d897319c6d4abf0e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

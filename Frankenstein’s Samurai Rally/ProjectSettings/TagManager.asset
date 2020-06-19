@@ -53,8 +53,14 @@ TagManager:
   - name: Background
     uniqueID: 13232123
     locked: 0
+  - name: BPlayer
+    uniqueID: 4136783489
+    locked: 0
   - name: Player
     uniqueID: 4276843887
+    locked: 0
+  - name: FPlayer
+    uniqueID: 1991653865
     locked: 0
   - name: Spoils
     uniqueID: 3284426281
