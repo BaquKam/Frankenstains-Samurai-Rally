@@ -38,7 +38,7 @@ public class HurdleSpawner : MonoBehaviour
             spawnDelay = hurdleSpawnDelay;
         }
 
-        playerPos = player.transform.position;
+        //playerPos = player.transform.position;
     }
 
     void spawnHurdle()
