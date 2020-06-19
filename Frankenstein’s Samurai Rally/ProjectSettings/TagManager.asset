@@ -13,6 +13,7 @@ TagManager:
   - Attack
   - Shield
   - Bonus
+  - Button
   layers:
   - Default
   - TransparentFX
