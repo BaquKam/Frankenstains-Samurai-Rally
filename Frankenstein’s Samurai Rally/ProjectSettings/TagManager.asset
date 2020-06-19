@@ -9,9 +9,10 @@ TagManager:
   - ObjectDestroyer
   - Hurdle
   - Spoils
-  - Shield
   - Proof
   - Attack
+  - Shield
+  - Bonus
   layers:
   - Default
   - TransparentFX

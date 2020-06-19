@@ -10,7 +10,15 @@ public class PointCounter : MonoBehaviour
     private int points = 0;
     public GameObject player;
 
-    // Update is called once per frame
+    private AudioSource source;
+    public AudioClip sound;
+    public AudioClip soundAttack;
+
+    private void Start()
+    {
+        source = gameObject.GetComponent<AudioSource>();
+    }
+
     void Update()
     {
         pointText.text = "Spoils: " + points.ToString();
@@ -20,10 +28,12 @@ public class PointCounter : MonoBehaviour
     {
         if (other.gameObject.tag == "Spoils")
         {
+            source.PlayOneShot(sound, 0.3f);
             points += 1;
             Destroy(other.gameObject);
         }else if (other.gameObject.tag == "Proof" && player.tag == "Attack")
         {
+            source.PlayOneShot(soundAttack, 0.3f);
             points += 1;
         }
     }
