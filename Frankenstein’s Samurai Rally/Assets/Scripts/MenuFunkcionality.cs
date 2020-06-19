@@ -7,9 +7,9 @@ public class MenuFunkcionality : MonoBehaviour
 {
     private void Start()
     {
-        if (PlayerPrefsX.GetIntArray("HighScoreArray", 0, 2)[0] == 0)
+        if (PlayerPrefsX.GetIntArray("HighScoreArray", 0, 10)[0] == 0)
         {
-            int[] highScoreInitializationArray = new int[2] { 0, 0 };
+            int[] highScoreInitializationArray = new int[10] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
             PlayerPrefsX.SetIntArray("HighScoreArray", highScoreInitializationArray);
         }
     }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class HighScore : MonoBehaviour
 {
     public Text highScoreText;
-    int[] hightScoreArray = new int[2];
+    int[] hightScoreArray = new int[10];
 
     private void Start()
     {

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PointCounter : MonoBehaviour
 {
     public Text pointText;
+    public Text pointTextHelp;
     private int points = 0;
     public GameObject player;
 
@@ -13,6 +14,7 @@ public class PointCounter : MonoBehaviour
     void Update()
     {
         pointText.text = "Spoils: " + points.ToString();
+        pointTextHelp.text = points.ToString();
     }
     private void OnTriggerEnter2D(Collider2D other)
     {

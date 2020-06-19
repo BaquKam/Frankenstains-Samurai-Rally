@@ -11,20 +11,20 @@ public class EndGame : MonoBehaviour
     public Text gameScore;
 
     private int score;
-    private int[] highScoresArray = new int[2];
+    private int[] highScoresArray = new int[10];
 
     // Start is called before the first frame update
     void Start()
     {
         highScoresArray = PlayerPrefsX.GetIntArray("HighScoreArray");
         score = int.Parse(gameScore.text);
-        if(score > highScoresArray[2])
+        if(score > highScoresArray[9])
         {
-            for(int i = 0; i<2; i++)
+            for(int i = 0; i<10; i++)
             {
                 if(score > highScoresArray[i])
                 {
-                    for(int j = 2; j>i; j--)
+                    for(int j = 9; j>i; j--)
                     {
                         highScoresArray[j] = highScoresArray[j - 1];
                     }
