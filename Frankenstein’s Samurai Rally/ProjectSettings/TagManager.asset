@@ -14,6 +14,7 @@ TagManager:
   - Shield
   - Bonus
   - Button
+  - Harmless
   layers:
   - Default
   - TransparentFX

@@ -2062,6 +2062,9 @@ MonoBehaviour:
   hurdle0: {fileID: 959247605912172142, guid: 39db5455d0f6ac04f8b9b4dc203f1968, type: 3}
   hurdle1: {fileID: 5416914223612949194, guid: d58f93d777c977e44aeb5d8be8ee1382, type: 3}
   hurdle2: {fileID: 1956879059200118062, guid: b45a0bb8bd1f27745a837ad5dfbaee5e, type: 3}
+  harmlessHurdle0: {fileID: 0}
+  harmlessHurdle1: {fileID: 0}
+  harmlessHurdle2: {fileID: 0}
   player: {fileID: 1925519288}
 --- !u!4 &1769463414
 Transform:

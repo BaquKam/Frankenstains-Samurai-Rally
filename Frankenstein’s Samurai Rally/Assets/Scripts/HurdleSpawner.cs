@@ -9,7 +9,11 @@ public class HurdleSpawner : MonoBehaviour
     public float hurdleSpawnDelay = 2f;
     public GameObject hurdle0;
     public GameObject hurdle1;
-    public GameObject hurdle2;
+    //public GameObject hurdle2;
+
+    public GameObject harmlessHurdle0;
+    public GameObject harmlessHurdle1;
+    //public GameObject harmlessHurdle2;
 
     private Vector3 playerPos;
     public GameObject player;
@@ -17,14 +21,22 @@ public class HurdleSpawner : MonoBehaviour
     private float spawnDelay;
 
     private float[] pathArray;
+    private GameObject[] hurdleArray;
 
     // Start is called before the first frame update
     void Start()
     {
+        hurdleArray = new GameObject[4];
+        hurdleArray[0] = hurdle0;
+        hurdleArray[1] = hurdle1;
+        hurdleArray[2] = harmlessHurdle0;
+        hurdleArray[3] = harmlessHurdle1;
+
         pathArray = new float[3];
         pathArray[0] = 0f;
         pathArray[1] = -1f;
         pathArray[2] = -1.97f;
+
         spawnDelay = hurdleSpawnDelay;
     }
 
