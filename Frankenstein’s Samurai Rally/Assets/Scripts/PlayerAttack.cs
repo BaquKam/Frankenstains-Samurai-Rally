@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -17,10 +16,6 @@ public class PlayerAttack : MonoBehaviour
     public int damage;
 
     public Animator playerAnim;
-
-    //public Text pointText;
-    //public Text pointTextHelp;
-    //private int points = 0;
 
     void Start()
     {
@@ -38,7 +33,7 @@ public class PlayerAttack : MonoBehaviour
 
             if (touch.position.x < screenWidth / 3 && touch.phase == TouchPhase.Began)
             {
-                Debug.Log("tap");
+                //Debug.Log("tap");
 
                 if (timeBtwAttack <= 0)
                 {
@@ -48,7 +43,7 @@ public class PlayerAttack : MonoBehaviour
                     {
                         enemiesToDamage[i].GetComponent<Enemy1>().TakeDamage(damage);
                     }
-                    Debug.Log("cos");
+                    //Debug.Log("cos");
                     timeBtwAttack -= startTimeBtwAttack;
                 }
                 else
