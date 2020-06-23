@@ -7,6 +7,7 @@ public class TouchController : MonoBehaviour
     private float screenWidth;
     public float speed = 10f;
     private Vector3 velocity;
+    private GameObject player;
 
     void Start()
     {
@@ -31,6 +32,10 @@ public class TouchController : MonoBehaviour
                 {
                     velocity += Vector3.down;
                 }
+            }else if(touch.phase == TouchPhase.Stationary)
+            {
+                player = GameObject.FindWithTag("Player");
+                player.gameObject.tag = "PlayerAttack";              
             }
 
             if (touch.position.y > screenWidth / 2 && touch.phase == TouchPhase.Began)

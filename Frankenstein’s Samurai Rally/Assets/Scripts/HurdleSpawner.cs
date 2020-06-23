@@ -21,16 +21,19 @@ public class HurdleSpawner : MonoBehaviour
     private float spawnDelay;
 
     private float[] pathArray;
-    private GameObject[] hurdleArray;
+    private GameObject[] hurdleArray0;
+    private GameObject[] hurdleArray1;
 
     // Start is called before the first frame update
     void Start()
     {
-        hurdleArray = new GameObject[4];
-        hurdleArray[0] = hurdle0;
-        hurdleArray[1] = hurdle1;
-        hurdleArray[2] = harmlessHurdle0;
-        hurdleArray[3] = harmlessHurdle1;
+        hurdleArray0 = new GameObject[2];
+        hurdleArray0[0] = hurdle0;
+        hurdleArray0[1] = harmlessHurdle0;
+
+        hurdleArray1 = new GameObject[2];
+        hurdleArray1[0] = hurdle1;
+        hurdleArray1[1] = harmlessHurdle1;
 
         pathArray = new float[3];
         pathArray[0] = 0f;
@@ -58,10 +61,12 @@ public class HurdleSpawner : MonoBehaviour
         int lane = Random.Range(0, 3);
         if(lane == 0)
         {
-            Instantiate(hurdle0, new Vector3(8.1f, pathArray[lane], 0), Quaternion.identity);
+            int number = Random.Range(0, 2);
+            Instantiate(hurdleArray0[number], new Vector3(8.1f, pathArray[lane], 0), Quaternion.identity);
         } else if(lane == 1 || lane == 2)
         {
-            Instantiate(hurdle1, new Vector3(8.1f, pathArray[lane], 0), Quaternion.identity);
+            int number1 = Random.Range(0, 2);
+            Instantiate(hurdleArray1[number1], new Vector3(8.1f, pathArray[lane], 0), Quaternion.identity);
         }/*else if(lane == 1 && playerPos.y <= 1.5f)
         {
             Debug.Log("jest ponizej");

@@ -20,7 +20,7 @@ public class CollisionDetect : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Hurdle")
+        if (other.gameObject.tag == "Hurdle" || other.gameObject.tag == "Hurdle1")
         {
             endScore.text = gameScore.text;
             gameOverPanel.gameObject.SetActive(true);

@@ -15,6 +15,7 @@ TagManager:
   - Bonus
   - Button
   - Harmless
+  - Hurdle1
   layers:
   - Default
   - TransparentFX
