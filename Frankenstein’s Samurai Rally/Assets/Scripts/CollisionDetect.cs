@@ -25,12 +25,13 @@ public class CollisionDetect : MonoBehaviour
             endScore.text = gameScore.text;
             gameOverPanel.gameObject.SetActive(true);
             Destroy(gameObject);
+
         }else if (other.gameObject.tag == "ObjectDestroyer")
         {
             Destroy(this.gameObject);
         }
 
-        if(other.gameObject.tag == "Bonus")
+        if (other.gameObject.tag == "Bonus")
         {
             source.PlayOneShot(sound, 0.3f);
         }

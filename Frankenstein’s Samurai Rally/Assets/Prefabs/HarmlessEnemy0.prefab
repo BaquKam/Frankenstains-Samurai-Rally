@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 5333216515555499179}
   - component: {fileID: 1038132633850979857}
   - component: {fileID: 6351367914684922478}
-  - component: {fileID: 4037287748219887260}
   - component: {fileID: 6438924737718756523}
-  m_Layer: 0
+  - component: {fileID: -2714743361803023668}
+  m_Layer: 8
   m_Name: HarmlessEnemy0
   m_TagString: Hurdle1
   m_Icon: {fileID: 0}
@@ -139,19 +139,6 @@ CircleCollider2D:
   m_Offset: {x: 0.113781214, y: -0.3698635}
   serializedVersion: 2
   m_Radius: 0.2839172
---- !u!114 &4037287748219887260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7596839844383756966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee7e25007d530164584b0cb89434392b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hurdleSpeed: 5
 --- !u!95 &6438924737718756523
 Animator:
   serializedVersion: 3
@@ -171,3 +158,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-2714743361803023668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7596839844383756966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da188e04165e6b44c8c4c3b5a0fafe6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hurdleSpeed: 5
+  health: 1

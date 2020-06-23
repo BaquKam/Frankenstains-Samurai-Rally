@@ -1,19 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TouchController : MonoBehaviour
 {
+    private float screenHeight;
     private float screenWidth;
     public float speed = 10f;
     private Vector3 velocity;
-    private GameObject player;
+    public GameObject player;
 
     void Start()
     {
-        screenWidth = Screen.height;
+        screenHeight = Screen.height;
+        screenWidth = Screen.width;
         velocity = transform.position;
-
     }
 
     // Update is called once per frame
@@ -26,19 +28,15 @@ public class TouchController : MonoBehaviour
             Vector3 touchPos = Camera.main.ScreenToWorldPoint(touch.position);
             touchPos.z = 0;
 
-            if (touch.position.y < screenWidth / 2 && touch.phase == TouchPhase.Began)
+            if (touch.position.y < screenHeight / 2 && touch.position.x > screenWidth / 3 && touch.phase == TouchPhase.Began)
             {
                 if (velocity.y > -2)
                 {
                     velocity += Vector3.down;
                 }
-            }else if(touch.phase == TouchPhase.Stationary)
-            {
-                player = GameObject.FindWithTag("Player");
-                player.gameObject.tag = "PlayerAttack";              
             }
 
-            if (touch.position.y > screenWidth / 2 && touch.phase == TouchPhase.Began)
+            if (touch.position.y > screenHeight / 2 && touch.position.x > screenWidth / 3 && touch.phase == TouchPhase.Began)
             {
                 if (velocity.y < 0)
                 {
