@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Enemy1 : MonoBehaviour
 {
@@ -10,21 +9,14 @@ public class Enemy1 : MonoBehaviour
 
     public int health;
 
-    public Text pointText;
-    public Text pointTextHelp;
-    private int points = 0;
-
     void Update()
     {
         this.gameObject.transform.Translate(new Vector3(-1, 0, 0) * hurdleSpeed * Time.deltaTime);
-        
-        if(health <= 0)
+
+        if (health <= 0)
         {
-            points += 1;
-            Destroy(gameObject);
+            Destroy(gameObject, 0.1f);
         }
-        pointText.text = "Spoils: " + points.ToString();
-        pointTextHelp.text = points.ToString();
     }
 
     private void OnTriggerEnter2D(Collider2D other)

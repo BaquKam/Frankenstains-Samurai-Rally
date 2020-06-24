@@ -37,4 +37,8 @@ public class PointCounter : MonoBehaviour
             points += 1;
         }
     }
+    public void AttackPoint(int number)
+    {
+        points += (number - 1);
+    }
 }

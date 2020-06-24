@@ -15,11 +15,18 @@ public class PlayerAttack : MonoBehaviour
     public float attackRangeY;
     public int damage;
 
+    private int points = 0;
+    public PointCounter function;
+
+    private AudioSource source;
+    public AudioClip sound;
+
     public Animator playerAnim;
 
     void Start()
     {
         screenWidth = Screen.width;
+        source = gameObject.GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -37,13 +44,16 @@ public class PlayerAttack : MonoBehaviour
 
                 if (timeBtwAttack <= 0)
                 {
-                    //playerAnim.SetTrigger("attack");
+                    source.PlayOneShot(sound, 0.3f);
+                    playerAnim.SetTrigger("Attack");
                     Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, whatIsEnemies);
                     for (int i = 0; i < enemiesToDamage.Length; i++)
                     {
                         enemiesToDamage[i].GetComponent<Enemy1>().TakeDamage(damage);
+                        points += 1;
+                        function.AttackPoint(points);
                     }
-                    //Debug.Log("cos");
+                    points = 0;
                     timeBtwAttack -= startTimeBtwAttack;
                 }
                 else

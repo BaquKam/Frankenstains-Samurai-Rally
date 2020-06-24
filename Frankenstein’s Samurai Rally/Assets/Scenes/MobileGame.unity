@@ -2091,7 +2091,7 @@ MonoBehaviour:
   hurdleSpawnDelay: 4
   hurdle0: {fileID: 959247605912172142, guid: 39db5455d0f6ac04f8b9b4dc203f1968, type: 3}
   hurdle1: {fileID: 5416914223612949194, guid: d58f93d777c977e44aeb5d8be8ee1382, type: 3}
-  harmlessHurdle0: {fileID: 7596839844383756966, guid: faec8cac41ff28e45999469abc62ec75,
+  harmlessHurdle0: {fileID: 3241756299377141138, guid: 321ecd356a36ebc4aa35ecc0d4664548,
     type: 3}
   harmlessHurdle1: {fileID: 917278388410577080, guid: 90749e44663177a40bb681f8d5492585,
     type: 3}
@@ -2793,6 +2793,8 @@ MonoBehaviour:
   attackRangeX: 1.82
   attackRangeY: 1.35
   damage: 2
+  function: {fileID: 1925519294}
+  sound: {fileID: 8300000, guid: fe0b1f9aeb45b41b089175aeeabd5d95, type: 3}
   playerAnim: {fileID: 1925519296}
 --- !u!1 &1965072555
 GameObject:
